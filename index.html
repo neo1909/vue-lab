@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello world</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <h2 style="text-align: center;">LÀM QUEN VỚI CÁC DIRECTIVE TRONG VUE.JS</h2>
+    <div id="app">
+        <h3>HELLO</h3>
+        {{ message }}
+    </div>
+
+    <div id="app-2">
+        <h3>v-bind</h3>
+        <span v-bind:title="message">
+            Hover vào để nhìn thấy message
+        </span>
+    </div>
+
+    <div id="app-3">
+        <h3>v-if</h3>
+        <span v-if="isSeen">
+            Ẩn hiện sử dụng v-if
+        </span>
+    </div>
+    
+    <div id="app-4">
+        <h3>v-for</h3>
+        <li class="loop-txt" v-for="(item, index) in arrTxt" :key="index">
+            {{ index + " : " + item.text }}
+        </li>
+    </div>
+    
+    <div id="app-5">
+        <h3>v-on:event : Xử lý thông tin đầu vào người dùng</h3>
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
+
+    <div id="app-6">
+        <h3>v-model: Two-way binding</h3>
+        <p>{{ message }}</p>
+        <input type="text" v-model="message">
+    </div>
+
+    <h3>Vue.component(id, [definition]): Composing with Component (Bien soan Component)</h3>
+    <div id="app-7">
+        <h3 style="font-size: bold;">vue-id = app-7</h3>
+        <tag-01></tag-01>
+        <tag-02></tag-02> 
+    </div>
+    <div id="app-8">
+        <h3 style="font-size: bold;">vue-id = app-8</h3>
+        <tag-02></tag-02> 
+    </div>
+    
+    <script src="js/index.js"></script>
+
+</body>
+</html>
