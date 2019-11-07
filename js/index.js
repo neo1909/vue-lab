@@ -3,6 +3,11 @@ var app = new Vue({
     el: "#app",
     data: {
         message: "Học Vue.js"
+    },
+    methods: {
+        changeTitle : function () {
+            this.message = "Cố lên Neo";
+        }
     }
 });
 
@@ -39,7 +44,7 @@ var app5 = new Vue({
         message: "Luong Ngoc Phu"
     },
     methods: {
-        reverseMessage: function() {
+        reverseMessage: function () {
             this.message = this.message.split(' ').reverse().join(' ');
         }
     } 
@@ -63,7 +68,6 @@ Vue.component('tag-02', {
 var localComp =  {
     template: '<p>Noi dung trong tag-new 01</p>'
 };
-
 
 var app7 = new Vue({
     el: "#app-7",
